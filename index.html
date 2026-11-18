@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="A directory of documented scams, fraud techniques, and online safety awareness reports.">
-    <title>Pakistan Scams</title>
+
+    <title>ScamWatch | Scam Awareness Directory</title>
 
     <style>
         * {
@@ -33,9 +35,12 @@
             line-height: 1.6;
         }
 
+        /* Header */
+
         header {
             border-bottom: 1px solid var(--border);
             padding: 22px 7%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,11 +61,15 @@
             font-size: 13px;
         }
 
+        /* Main */
+
         main {
             width: 86%;
             max-width: 1100px;
             margin: 75px auto;
         }
+
+        /* Hero */
 
         .hero {
             margin-bottom: 42px;
@@ -85,6 +94,8 @@
             max-width: 620px;
         }
 
+        /* Search */
+
         .search-container {
             margin: 30px 0 20px;
         }
@@ -92,9 +103,11 @@
         #search {
             width: 100%;
             padding: 16px 18px;
+
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 10px;
+
             color: var(--text);
             font-size: 15px;
             outline: none;
@@ -103,6 +116,12 @@
         #search:focus {
             border-color: var(--accent);
         }
+
+        #search::placeholder {
+            color: #64748b;
+        }
+
+        /* Filters */
 
         .filters {
             display: flex;
@@ -113,9 +132,11 @@
 
         .filter-btn {
             padding: 9px 17px;
+
             border: 1px solid var(--border);
             background: var(--surface);
             color: var(--muted);
+
             border-radius: 7px;
             cursor: pointer;
             transition: 0.2s;
@@ -128,6 +149,8 @@
             border-color: var(--accent);
         }
 
+        /* Scam cards */
+
         .section-heading {
             font-size: 19px;
             margin-bottom: 18px;
@@ -135,7 +158,11 @@
 
         .scam-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(260px, 1fr)
+            );
+
             gap: 17px;
         }
 
@@ -143,9 +170,11 @@
             display: block;
             text-decoration: none;
             color: inherit;
+
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
+
             padding: 22px;
             transition: 0.2s;
         }
@@ -177,10 +206,13 @@
         .read-more {
             display: inline-block;
             margin-top: 18px;
+
             color: var(--accent);
             font-size: 13px;
             font-weight: bold;
         }
+
+        /* No results */
 
         #no-results {
             display: none;
@@ -188,14 +220,20 @@
             padding: 30px 0;
         }
 
+        /* Footer */
+
         footer {
             border-top: 1px solid var(--border);
             text-align: center;
+
             padding: 28px;
             color: var(--muted);
             font-size: 13px;
+
             margin-top: 100px;
         }
+
+        /* Responsive */
 
         @media (max-width: 600px) {
             header {
@@ -216,135 +254,252 @@
 
 <body>
 
-<header>
-    <div class="logo">Scam<span>Watch.</span></div>
-    <div class="header-tag">Awareness · Prevention · Education</div>
-</header>
-
-<main>
-
-    <section class="hero">
-        <div class="hero-label">Stay informed. Stay protected.</div>
-        <h1>Know the scam.<br>Protect yourself.</h1>
-        <p>
-            A collection of documented scams, fraudulent techniques,
-            and social engineering tactics. Understand how they work
-            so you can recognize and avoid becoming a victim.
-        </p>
-    </section>
-
-    <section>
-        <div class="search-container">
-            <input
-                type="search"
-                id="search"
-                placeholder="Search scams by name, description, or platform..."
-                autocomplete="off"
-            >
+    <header>
+        <div class="logo">
+            Scam<span>Watch.</span>
         </div>
 
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="whatsapp">WhatsApp</button>
-            <button class="filter-btn" data-filter="easypaisa">Easypaisa</button>
+        <div class="header-tag">
+            Awareness · Prevention · Education
         </div>
-    </section>
+    </header>
 
-    <section>
-        <h2 class="section-heading">Documented Scams</h2>
+    <main>
 
-        <div class="scam-grid" id="scam-grid">
+        <!-- Hero Section -->
 
-            <a href="easypaisa/easypaisa1.html"
-               class="scam-card"
-               data-category="easypaisa"
-               data-search="easypaisa accidental payment refund social engineering name phone number impersonation">
+        <section class="hero">
 
-                <div class="category">Easypaisa · Social Engineering</div>
-                <h3>Fake Accidental Payment Refund</h3>
-                <p>
-                    Scammers exploit payment-app information and
-                    impersonate accidental senders to manipulate
-                    victims into returning money.
-                </p>
-                <span class="read-more">Read report →</span>
-            </a>
+            <div class="hero-label">
+                Stay informed. Stay protected.
+            </div>
 
-            <a href="whatsapp/whatsapp1.html"
-               class="scam-card"
-               data-category="whatsapp"
-               data-search="whatsapp placeholder scam fraud">
+            <h1>
+                Know the scam.<br>
+                Protect yourself.
+            </h1>
 
-                <div class="category">WhatsApp · General</div>
-                <h3>WhatsApp Scam Report</h3>
-                <p>
-                    A placeholder for your next documented
-                    WhatsApp scam.
-                </p>
-                <span class="read-more">Read report →</span>
-            </a>
+            <p>
+                A collection of documented scams, fraudulent
+                techniques, and social engineering tactics.
+                Understand how they work so you can recognize
+                and avoid becoming a victim.
+            </p>
 
-        </div>
+        </section>
 
-        <p id="no-results">No matching scams found.</p>
-    </section>
+        <!-- Search and Filters -->
 
-</main>
+        <section>
 
-<footer>
-    ScamWatch · An independent scam-awareness resource.
-</footer>
+            <div class="search-container">
 
-<script>
-    const searchInput = document.getElementById("search");
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".scam-card");
-    const noResults = document.getElementById("no-results");
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search scams by name, description, or platform..."
+                    autocomplete="off"
+                >
 
-    let activeFilter = "all";
+            </div>
 
-    function filterScams() {
-        const query = searchInput.value.toLowerCase().trim();
-        let visibleCount = 0;
+            <div class="filters">
 
-        cards.forEach(card => {
-            const category = card.dataset.category;
-            const searchableText = (
-                card.innerText + " " + card.dataset.search
-            ).toLowerCase();
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
 
-            const matchesCategory =
-                activeFilter === "all" || category === activeFilter;
+                <button
+                    class="filter-btn"
+                    data-filter="whatsapp"
+                >
+                    WhatsApp
+                </button>
 
-            const matchesSearch =
-                searchableText.includes(query);
+                <button
+                    class="filter-btn"
+                    data-filter="easypaisa"
+                >
+                    Easypaisa
+                </button>
 
-            const visible = matchesCategory && matchesSearch;
+            </div>
 
-            card.style.display = visible ? "block" : "none";
+        </section>
 
-            if (visible) visibleCount++;
+        <!-- Scam Directory -->
+
+        <section>
+
+            <h2 class="section-heading">
+                Documented Scams
+            </h2>
+
+            <div class="scam-grid" id="scam-grid">
+
+                <!-- Easypaisa Scam -->
+
+                <a
+                    href="easypaisa/easypaisa.html"
+                    class="scam-card"
+                    data-category="easypaisa"
+                    data-search="easypaisa accidental payment refund social engineering name phone number impersonation mobile wallet fraudulent transfer"
+                >
+
+                    <div class="category">
+                        Easypaisa · Social Engineering
+                    </div>
+
+                    <h3>
+                        Fake Accidental Payment Refund
+                    </h3>
+
+                    <p>
+                        Scammers exploit payment-app information
+                        and impersonate accidental senders to
+                        manipulate victims into returning money.
+                    </p>
+
+                    <span class="read-more">
+                        Read report →
+                    </span>
+
+                </a>
+
+                <!-- WhatsApp Placeholder -->
+
+                <a
+                    href="whatsapp/whatsapp1.html"
+                    class="scam-card"
+                    data-category="whatsapp"
+                    data-search="whatsapp scam fraud social engineering"
+                >
+
+                    <div class="category">
+                        WhatsApp · General
+                    </div>
+
+                    <h3>
+                        WhatsApp Scam Report
+                    </h3>
+
+                    <p>
+                        A placeholder for your next documented
+                        WhatsApp scam.
+                    </p>
+
+                    <span class="read-more">
+                        Read report →
+                    </span>
+
+                </a>
+
+            </div>
+
+            <p id="no-results">
+                No matching scams found.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        ScamWatch · An independent scam-awareness resource.
+    </footer>
+
+    <script>
+
+        const searchInput =
+            document.getElementById("search");
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const cards =
+            document.querySelectorAll(".scam-card");
+
+        const noResults =
+            document.getElementById("no-results");
+
+        let activeFilter = "all";
+
+
+        function filterScams() {
+
+            const query =
+                searchInput.value.toLowerCase().trim();
+
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+
+                const category =
+                    card.dataset.category;
+
+                const searchableText = (
+                    card.innerText + " " +
+                    card.dataset.search
+                ).toLowerCase();
+
+                const matchesCategory =
+                    activeFilter === "all" ||
+                    category === activeFilter;
+
+                const matchesSearch =
+                    searchableText.includes(query);
+
+                const visible =
+                    matchesCategory && matchesSearch;
+
+                card.style.display =
+                    visible ? "block" : "none";
+
+                if (visible) {
+                    visibleCount++;
+                }
+
+            });
+
+            noResults.style.display =
+                visibleCount === 0 ? "block" : "none";
+
+        }
+
+
+        // Search functionality
+
+        searchInput.addEventListener(
+            "input",
+            filterScams
+        );
+
+
+        // Category filtering
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                activeFilter =
+                    button.dataset.filter;
+
+                filterScams();
+
+            });
+
         });
 
-        noResults.style.display =
-            visibleCount === 0 ? "block" : "none";
-    }
-
-    searchInput.addEventListener("input", filterScams);
-
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            filterButtons.forEach(btn =>
-                btn.classList.remove("active")
-            );
-
-            button.classList.add("active");
-            activeFilter = button.dataset.filter;
-
-            filterScams();
-        });
-    });
-</script>
+    </script>
 
 </body>
 </html>
